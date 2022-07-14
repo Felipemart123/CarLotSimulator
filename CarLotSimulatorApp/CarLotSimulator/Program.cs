@@ -13,6 +13,35 @@ namespace CarLotSimulator
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
 
+            var myCar = new Car();
+
+            myCar.Year = 2010;
+            myCar.Make = "lamborghini";
+            myCar.Model = "aventador";
+            myCar.EngineNoise = "vrmm";
+            myCar.HonkNoise = "HONK";
+            myCar.IsDriveable = true;
+
+
+            var billysCar = new Car()
+            {
+                Year = 2005,
+                Make = "porsche",
+                Model = "911",
+                EngineNoise = "vrmm",
+                HonkNoise = "HONK",
+                IsDriveable = true
+
+            };
+
+
+            var bobsCar = new Car(2001, "Explorer", "Ford", "krrr" , "HONKKK" , false);
+
+            myCar.MakeEngineNoise(myCar.EngineNoise);
+            bobsCar.MakeEngineNoise(bobsCar.EngineNoise);
+            billysCar.MakeEngineNoise(billysCar.EngineNoise);
+
+
 
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
